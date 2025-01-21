@@ -120,9 +120,9 @@ COPY --from=aruco /opt/LCCV /opt/LCCV
 COPY --from=px4 /usr/local/lib /usr/local/lib
 
 # Add entrypoints
-COPY aruco_entrypoint.sh /aruco_entrypoint.sh
-COPY dds_entrypoint.sh /dds_entrypoint.sh
-COPY ros_entrypoint.sh /ros_entrypoint.sh
+COPY entrypoints/aruco_entrypoint.sh /aruco_entrypoint.sh
+COPY entrypoints/dds_entrypoint.sh /dds_entrypoint.sh
+COPY dentrypoints/ros_entrypoint.sh /ros_entrypoint.sh
 RUN chmod +x /entrypoint.sh /dds_entrypoint.sh /ros_entrypoint.sh
 
 # Default entrypoint

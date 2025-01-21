@@ -30,7 +30,14 @@ FROM base as aruco
 RUN apt-get install -y python3-prctl libatlas-base-dev ffmpeg python3-pip
 RUN apt-get install -y python3-pyqt5 python3-opengl # only if you want GUI features
 RUN pip3 install numpy --upgrade
-RUN pip3 install picamera2
+#RUN pip3 install picamera2
+RUN if [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "armv7l" ]; then \
+        apt-get update && apt-get install -y python3-pyqt5 python3-opengl python3-libcamera && \
+        pip3 install picamera2; \
+    else \
+        echo "Skipping picamera2 for non-Raspberry Pi architecture."; \
+    fi
+
 
 RUN pip3 install meson ninja jinja2 ply
 RUN apt install -y libyaml-dev python3-yaml python3-ply python3-jinja2

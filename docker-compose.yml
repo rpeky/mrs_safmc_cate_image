@@ -1,0 +1,47 @@
+
+services:
+  dds:
+    image: ghcr.io/rpeky/safmc_2025:latest
+    container_name: dds
+    devices:
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
+    network_mode: host
+    ipc: host
+    environment:
+      - DDS_SERIAL_PORT=/dev/ttyAMA0
+      - DDS_BAUD=921600
+    restart: always
+
+  ros:
+    #to modify
+    image: ghcr.io/rpeky/safmc_2025:latest
+    container_name: ros
+    network_mode: host
+    ipc: host
+    volumes:
+      - /home/pi/safmc_ws:/root/safmc_ws
+    environment:
+      - PATH_TO_WS=/home/ashleykoh/safmc_ws
+      - PACKAGE_NAME=safmc_2024
+      - NODE_NAME=offboard_control
+    restart: always
+
+  aruco:
+    #to modify
+    image: ghcr.io/rpeky/safmc_2025:latest
+    container_name: aruco
+    network_mode: host
+    ipc: host
+    privileged: true
+    volumes:
+      - /home/pi/safmc_ws:/root/safmc_ws
+      - /dev/:/dev/
+      - /run/udev:/run/udev:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    devices:
+      - /dev:/dev
+    environment:
+      - UDEV=1
+      - DISPLAY=unix$DISPLAY
+    restart: always
+

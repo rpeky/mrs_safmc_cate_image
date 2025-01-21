@@ -15,7 +15,6 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
 	"msg/TwistID.msg"
-	"msg/Broadcast_State.DEPENDENCIES.msg"
 	DEPENDENCIES geometry_msgs
 	)
 

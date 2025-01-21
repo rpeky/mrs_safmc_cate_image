@@ -74,7 +74,7 @@ RUN sudo make -j2 install
 
 RUN sudo ldconfig
 
-RUN apt-get install -y \
+RUN apt-get install --no-install-recommends -y \
     ros-humble-libcamera \
     ros-humble-cv-bridge \
     ros-humble-vision-opencv \

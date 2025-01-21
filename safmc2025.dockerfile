@@ -24,8 +24,6 @@ RUN source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash
 
 RUN pip install --user -U empy==3.3.4 pyros-genmsg setuptools
 
----
-
 # set up aruco
 FROM base as aruco
 
@@ -87,8 +85,6 @@ RUN apt-get install -y \
 
 WORKDIR /root
 
----
-
 # set up PX4 stuff / dds
 FROM base as px4
 
@@ -102,8 +98,6 @@ RUN cmake ..
 RUN make 
 RUN sudo make install 
 RUN sudo ldconfig /usr/local/lib/
-
----
 
 # build workspace
 FROM base as build
@@ -119,8 +113,6 @@ COPY --from=build /root/safmc_ws /root/safmc_ws
 COPY --from=vision /opt/libcamera /opt/libcamera
 COPY --from=vision /opt/LCCV /opt/LCCV
 COPY --from=px4 /usr/local/lib /usr/local/lib
-
----
 
 # Add entrypoints
 COPY aruco_entrypoint.sh /aruco_entrypoint.sh

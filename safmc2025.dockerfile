@@ -109,9 +109,14 @@ RUN source /opt/ros/humble/setup.bash && \
 cd /root/safmc_ws && \
 colcon build
 
+# runtime image
+FROM base as runtime
+
 COPY --from=build /root/safmc_ws /root/safmc_ws
-COPY --from=vision /opt/libcamera /opt/libcamera
-COPY --from=vision /opt/LCCV /opt/LCCV
+
+COPY --from=aruco /opt/libcamera /opt/libcamera
+COPY --from=aruco /opt/LCCV /opt/LCCV
+
 COPY --from=px4 /usr/local/lib /usr/local/lib
 
 # Add entrypoints

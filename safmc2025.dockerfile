@@ -114,6 +114,10 @@ WORKDIR /root
 COPY ros2_ws /root/safmc_ws
 RUN source /opt/ros/humble/setup.bash && \
 cd /root/safmc_ws && \
+colcon build --packages-select px4_msgs
+RUN source install/setup.bash
+colcon build --packages-select px4_ros_com
+RUN source install/setup.bash
 colcon build
 
 # runtime image

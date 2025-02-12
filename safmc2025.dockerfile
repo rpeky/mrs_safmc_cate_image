@@ -1,5 +1,5 @@
 # set up ros2 environment
-FROM ros:humble as base
+FROM ros:humble AS base
 
 SHELL ["/bin/bash", "-c"]
 
@@ -25,7 +25,7 @@ RUN source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash
 RUN pip install --user -U empy==3.3.4 pyros-genmsg setuptools
 
 # set up aruco
-FROM base as aruco
+FROM base AS aruco
 
 RUN apt-get install -y python3-prctl libatlas-base-dev ffmpeg python3-pip
 RUN apt-get install -y python3-pyqt5 python3-opengl # only if you want GUI features
@@ -93,7 +93,7 @@ RUN apt-get install --no-install-recommends -y \
 WORKDIR /root
 
 # set up PX4 stuff / dds
-FROM base as px4
+FROM base AS px4
 
 # Install Micro-XRCE=DDS PX4-ROS2 bridge/middleware
 WORKDIR /root
@@ -107,7 +107,7 @@ RUN sudo make install
 RUN sudo ldconfig /usr/local/lib/
 
 # build workspace
-FROM base as build
+FROM base AS build
 
 # copy workspace to build dependencies
 WORKDIR /root
@@ -121,7 +121,7 @@ RUN source install/setup.bash
 colcon build
 
 # runtime image
-FROM base as runtime
+FROM base AS runtime
 
 COPY --from=build /root/safmc_ws /root/safmc_ws
 

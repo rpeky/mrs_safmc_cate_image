@@ -1,0 +1,2 @@
+Invoking command in '/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic -- -j16 -l16
+Invoked command in '/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic -- -j16 -l16

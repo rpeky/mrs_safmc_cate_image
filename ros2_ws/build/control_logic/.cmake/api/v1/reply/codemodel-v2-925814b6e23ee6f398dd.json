@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-1ecc2252e831aa275a49.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "control_logic",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "aruco_utils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aruco_utils-d9131dc956415d325d3e.json",
+					"name" : "aruco_utils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_logic_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_logic_uninstall-d3a09649b24c74629179.json",
+					"name" : "control_logic_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "offboard_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-offboard_controller-f7ab14604c85943327ba.json",
+					"name" : "offboard_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-608de7c8265e5478bbf5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic",
+		"source" : "/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/src/control_logic"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

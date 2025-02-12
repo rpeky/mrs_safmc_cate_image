@@ -1,0 +1,11 @@
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/uninstall.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/control_logic_uninstall.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/aruco_utils.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/offboard_controller.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/test.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/edit_cache.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/rebuild_cache.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/list_install_components.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/install.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/install/local.dir
+/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic/CMakeFiles/install/strip.dir

@@ -1,0 +1,3 @@
+[submodule "ros2_ws/src/camera_ros"]
+	path = ros2_ws/src/camera_ros
+	url = https://github.com/christianrauch/camera_ros

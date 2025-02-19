@@ -1,0 +1,10 @@
+[0.014s] Invoking command in '/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic -- -j16 -l16
+[0.048s] [ 25%] [32mBuilding CXX object CMakeFiles/aruco_utils.dir/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/src/aruco/image_converter.cpp.o[0m
+[0.072s] [01m[K/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/src/aruco/image_converter.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+[0.072s]     3 | #include [01;31m[K"rclcpp/rclcpp.hpp"[m[K
+[0.072s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.072s] compilation terminated.
+[0.074s] gmake[2]: *** [CMakeFiles/aruco_utils.dir/build.make:76: CMakeFiles/aruco_utils.dir/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/src/aruco/image_converter.cpp.o] Error 1
+[0.074s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/aruco_utils.dir/all] Error 2
+[0.074s] gmake: *** [Makefile:146: all] Error 2
+[0.076s] Invoked command in '/home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/peky/peky_safmc/mrs_safmc_cate_image/ros2_ws/build/control_logic -- -j16 -l16
